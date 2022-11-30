@@ -1,4 +1,4 @@
-## DESCRIPCIÓN
+## Descripción
 
 El objetivo principal de la marca PlaySports será ofrecer prendas deportivas en la máxima calidad para que nuestros clientes practiquen su deporte favorito con la máxima comodidad posible, de esta forma mejorar su experiencia a la hora de la práctica.
 
@@ -38,3 +38,15 @@ Son un clásico disponible desde los colores más llamativos hasta los vintage, 
 
 También ofrecemos artículos deportivos para diferente categorías como:
 ciclismo, fitness, cardio, fuerza, yoga/ pilates, tenis, entre otros.
+
+## Wireframe
+
+https://www.figma.com/file/6v4fzGvfRY3wfoJziHN2Fa/Ecommerce---PlaySports?node-id=75%3A559&t=2fKnu5XWTo3POack-1
+
+## Colaboradores
+
+- Gabriel Gaitán
+- Eder Samir
+- Julián Andrés Mendéz
+- Natalia Mora
+- Andry Salazar
