@@ -1,10 +1,5 @@
-const path = require('path');
-
 const controller = {
-  index: (req, res) => {
-    //vistas de index
-    res.sendFile(path.resolve(__dirname, '../views/index.html'));
-  }
+  index: (req, res) => res.render('index'),
 };
 
 module.exports = controller;
