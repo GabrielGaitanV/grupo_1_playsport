@@ -37,7 +37,7 @@ const controller = {
         email,
         password: bcrypt.hashSync(password, 10),
         category: "Customer",
-        image: "",
+        image: req.file ? `/images/user/${req.file.filename}` : '/images/user/img_user_default.png',
       };
       users.push(newUser);
       fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ""));
@@ -46,8 +46,8 @@ const controller = {
       const errorMessage = !completedFields
         ? "Formulario incompleto"
         : !validPassword
-        ? "Las contraseñas no coinciden"
-        : "El usuario ya se encuentra registrado";
+          ? "Las contraseñas no coinciden"
+          : "El usuario ya se encuentra registrado";
 
       res.render("users/register", {
         errorMessage,
