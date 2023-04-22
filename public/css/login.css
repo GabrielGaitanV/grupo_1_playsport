@@ -1,5 +1,10 @@
-.register-container {
+.login-container {
     padding: 0 30%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
 
 .btn-register {
