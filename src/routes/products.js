@@ -25,7 +25,7 @@ router.post('/create', uploadFile.single('product_image'), productsController.st
 
 router.get('/edit/:id', authMiddleware, productsController.edit);//vistas formulario de edicion
 
-router.put('/edit/:id', uploadFile.single('product_image'), productsController.update);//funcionalidad edicion de producto
+router.post('/edit/:id', uploadFile.single('product_image'), productsController.update);//funcionalidad edicion de producto
 
 router.post('/delete/:id', authMiddleware, productsController.destroy)
 module.exports = router;
