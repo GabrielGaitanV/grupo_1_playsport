@@ -2,16 +2,26 @@
 <html lang="en">
 
 <%- include('./partials/head',{url:"/css/index.css"}) %>
+<script type='text/javascript' src='/js/carrousel.js'></script>
     <body>
         <%- include('./partials/nav-bar') %>
             <main>
-                <div class="banner">
-                    <img class="img" src="images/logo-banner/banner.png" alt="">
-                    <div class="informacion">
-                        <form action="/DEPORTES" method="post">
-                            <button type="submit">Compra ahora</button>
-                        </form>
+                <div class="lds-dual-ring loader" id="loader"></div>  
+                <div class="carrousel">
+                    <div class="grande">
+                        <img src="/images/logo-banner/1.png" alt="imagen 1" class="imgc">
+                        <img src="/images/logo-banner/2.png" alt="imagen 2" class="imgc">
+                        <img src="/images/logo-banner/3.png" alt="imagen 3" class="imgc">
+                        <img src="/images/logo-banner/4.png" alt="imagen 4" class="imgc">
+                        <img src="/images/logo-banner/5.png" alt="imagen 5" class="imgc">
                     </div>
+                    <ul class="puntos">
+                        <li class="punto activo"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                        <li class="punto"></li>
+                    </ul>
                 </div>
 
                 <div class="subir">
@@ -142,6 +152,7 @@
                 </section>
 
             </main>
+            <script type='text/javascript' src='/js/loader.js'></script>
             <%- include('./partials/footer') %>
     </body>
 

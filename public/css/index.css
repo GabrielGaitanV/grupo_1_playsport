@@ -1,27 +1,106 @@
 /*MAIN*/
 
-.banner {
-    margin-bottom: 1rem;
-}
+/*Loader*/
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #01BAEF;
+    border-color: #FF007B transparent #01BAEF transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
-.img {
+.loader{
     width: 100%;
-    height: 400px;
-    object-fit: cover;
-    -webkit-filter: grayscale(1);
-    /* Webkit */
-    filter: gray;
-    /* IE6-9 */
-    filter: grayscale(1);
-    /* W3C */
+    height: 100vh;
+    background-color: #FBFBFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:10000;
+    opacity: 100%;
+    transition: all 0.7s ease;
 }
 
-.informacion {
-    position: relative;
-    bottom: 100px;
-    text-align: center;
-    left: 25px;
+.loader2{
+    visibility: hidden;
+    opacity: 0%;
 }
+/*Fin loader*/
+
+/*Carousel*/
+.carrousel{
+    width: 90%;
+    max-width: 120em;
+    padding: 2em;
+    margin: auto;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.grande{
+    width: 500%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+
+.imgc{
+    width: calc(100% / 4.9 - 2em);
+    min-height:10vh;
+    max-height: 60vh;
+    padding: 1.5em;
+    margin: .2em;
+    border-radius: 40px;
+}
+
+
+.puntos{
+    width: 100%;
+    margin: 1em 0 0;
+    padding:0.4em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.punto{
+    width: 1.3em;
+    height: 1.3em;
+    margin: 0.3em 0.3em 0;
+    border-radius: 15px;
+    background: #757575;
+    box-shadow:  10px 10px 17px #aaaaaa,
+             -10px -10px 17px #ffffff;
+}
+
+.punto.activo{
+    background-color: #01baef;
+}
+/*fin de carousel*/
 
 a {
     display: inline-block;
@@ -86,7 +165,7 @@ main div form button {
 }
 
 .products:hover{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px 0px #757575;
 }
 
 .products:hover p{
@@ -194,5 +273,11 @@ main div form button {
     .infoWrapper {
         width: 100%;
         max-width: 100%;
+    }
+}
+
+@media (min-width: 1000px){
+    .carrousel{
+        width: 50%;
     }
 }

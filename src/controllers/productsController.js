@@ -71,11 +71,11 @@ store: async function (req, res) {
       product_name: req.body.product_name,
       product_description: req.body.product_description,
       product_price: req.body.product_price,
-      product_image: "image-default.png",
       category_id: req.body.category_id
     }
     if(req.file){
-    productUpdate.product_image = req.file.filename
+
+      productUpdate.product_image= req.file.filename
     }
 
     //proceso de reemplazo o de edicion de producto

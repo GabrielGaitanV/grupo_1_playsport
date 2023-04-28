@@ -53,6 +53,7 @@ main div form input{
     transition: .5s;
     width: 65%;
     margin: auto;
+    caret-color: #FF007B;
 }
 
 main div form input:hover{
@@ -97,6 +98,12 @@ main div form textarea:hover{
     border: solid 1px #FF007B;
     color: #FBFBFF;
     opacity: 100%;
+}
+
+.errors{
+    text-align: center;
+    font-weight: bold;
+    color: #FF007B;
 }
 
 @media (min-width:1000px){
