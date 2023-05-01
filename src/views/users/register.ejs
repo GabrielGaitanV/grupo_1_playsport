@@ -9,9 +9,17 @@
             <div class="card">
                 <form action="/auth/create" method="post" class="formGroup" enctype="multipart/form-data">
                     <h2>Formulario de Registro</h2>
+                    <div class="errors">
+                        <ul></ul>
+                    </div>
                     <div class="inputContainer">
                         <label for="">Nombres:</label>
-                        <input class="inputRegister" autocomplete="off" type="text" name="name" required>
+                        <input class="inputRegister" autocomplete="off" type="text" name="name" id="user_name" required>
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="errores">
+                                <%= errors.name.msg%>
+                            </div>
+                        <% } %>s
                     </div>
                     <div class="inputContainer">
                         <label for="">Apellidos:</label>
@@ -33,21 +41,16 @@
                         <label>Imagen de Perfil:</label>
                         <input class="inputImage" type="file" name="userImage" id="userImage" />
                     </div>
-                    <input type="submit" class="btn-register" value="Registrar">
+                    <input type="submit" class="btn-register" value="Registrar" id="guardar">
                 </form>
 
-                <% if (typeof errorMessage !=="undefined" ) { %>
-                    <div class="errorBanner">
-                        <p>
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <%= errorMessage %>
-                        </p>
-                    </div>
-                    <% } %>
-                </div>
+
+              
             </div>
             </main>
             <%- include('../partials/footer') %>
+            <script type="text/javascript" src="/js/validationUser.js"></script>
+        </div>
     </body>
 
 </html>
