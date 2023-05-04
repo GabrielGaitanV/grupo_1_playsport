@@ -13,12 +13,13 @@ window.addEventListener('load', ()=>{
     guardar.addEventListener('click', (e)=>{
         console.log(e);
         let errors = [];
-            
-            if( name.value == '' && name.value < 5){
-                errors.push ('El nombre es obligatorio y debe tener al menos 5 caracteres')
+        
+
+            if( name.value == ''){
+                errors.push ('El nombre es obligatorio y debe tener al menos 5 caracteres');
             }
             
-            if(lastName.value.length = '' && lastName.value < 5){
+            if(lastName.value == '' && lastName.value.length < 5){
                 errors.push('El apellido es obligatorio y debe tener al menos 5 caracteres')
             }
             
@@ -40,6 +41,7 @@ window.addEventListener('load', ()=>{
                 errors.push('La imagen del usuario debe tener un archivo valido, (JPG, JPEG, PNG, GIF)')
             }
             console.log(errors.length);
+
             if(errors.length > 0){
                 e.preventDefault();
 

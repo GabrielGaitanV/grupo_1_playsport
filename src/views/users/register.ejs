@@ -19,27 +19,27 @@
                             <div class="errores">
                                 <%= errors.name.msg%>
                             </div>
-                        <% } %>s
+                        <% } %>
                     </div>
                     <div class="inputContainer">
                         <label for="">Apellidos:</label>
-                        <input class="inputRegister" autocomplete="off" type="text" name="lastName" required>
+                        <input class="inputRegister" autocomplete="off" type="text" name="lastName" id="user_lastName" required>
                     </div>
                     <div class="inputContainer">
                         <label for="">Email:</label>
-                        <input class="inputRegister" autocomplete="off" type="email" name="email"  required>
+                        <input class="inputRegister" autocomplete="off" type="email" name="email" id="user_email" required>
                     </div>
                     <div class="inputContainer">
                         <label for="">Contraseña:</label>
-                        <input class="inputRegister" autocomplete="off" type="password" name="password" required>
+                        <input class="inputRegister" autocomplete="off" type="password" name="password" id="user_password" required>
                     </div>
                     <div class="inputContainer">
                         <label for="">Confirmar Contraseña:</label>
-                        <input class="inputRegister" autocomplete="off" type="password" name="passwordRepeat" required>
+                        <input class="inputRegister" autocomplete="off" type="password" name="passwordRepeat" id="user_confirmPassword" required>
                     </div>
                     <div class="inputContainer">
                         <label>Imagen de Perfil:</label>
-                        <input class="inputImage" type="file" name="userImage" id="userImage" />
+                        <input class="inputImage" type="file" name="userImage" id="user_image"/>
                     </div>
                     <input type="submit" class="btn-register" value="Registrar" id="guardar">
                 </form>
