@@ -18,7 +18,7 @@ order_status boolean NOT NULL,
 primary key (order_id)
 );
 
-create table categorys(
+create table categories(
 category_id int NOT NULL,
 category_name varchar(40) NOT NULL,
 primary key (category_id)
@@ -32,7 +32,7 @@ product_price int NOT NULL,
 product_image varchar(60) NOT NULL,
 category_id int NOT NULL,
 primary key (product_id),
-foreign key (category_id) references categorys(category_id)
+foreign key (category_id) references categories(category_id)
 );
 
 create table orders_products(
@@ -45,7 +45,7 @@ foreign key (product_id) references products(product_id)
 );
 
 
-INSERT INTO categorys (category_id, category_name) VALUES (1,"Destacado"),(2,"Deporte"),(3,"Hombre"),(4,"Mujer"),(5,"Niño");
+INSERT INTO categories (category_id, category_name) VALUES (1,"Destacado"),(2,"Deporte"),(3,"Hombre"),(4,"Mujer"),(5,"Niño");
 
 INSERT INTO products (product_id, product_name, product_description, product_price, product_image, category_id) VALUES
 (1,"Sudadera Deportiva","Conjunto deportivo de 2 piezas para hombre, sudadera: manga larga plisada, color sólido, capucha con cordón, bolsillo canguro, ajuste entallado.",119000,"conj-dep-gris.jpg",3),
@@ -61,4 +61,5 @@ INSERT INTO products (product_id, product_name, product_description, product_pri
 
 INSERT INTO users (user_id,first_name, last_name, user_email, user_password, user_image) VALUES
 (1,"santiago","leon","santiagoleon12@gmail.com","satiago123","img_user_default.png"),
+
 (2,"gabriel","gaitan","gabrielgaitan17@gmail.com","123","img_user_default.png");

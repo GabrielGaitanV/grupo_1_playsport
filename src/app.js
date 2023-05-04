@@ -11,6 +11,8 @@ const routesProduct = require('./routes/products');
 const routesCart = require('./routes/cart');
 const routesAuth = require('./routes/auth');
 const routesMain = require('./routes/main');
+const apiProductsRoutes = require('./routes/api/apiProductsRoutes');
+const apiUsersRoutes = require('./routes/api/apiUsersRoutes');
 
 //middlewares
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
@@ -35,6 +37,8 @@ app.listen(port, () => console.log('Servidor de PlaySport funcionando'));
 
 app.use('/', routesMain);
 app.use('/products', routesProduct);
+app.use('/api/products', apiProductsRoutes);
+app.use('/api/users', apiUsersRoutes)
 app.use('/cart', routesCart);
 app.use('/auth', routesAuth);
 

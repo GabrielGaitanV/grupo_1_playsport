@@ -281,3 +281,9 @@ main div form button {
         width: 50%;
     }
 }
+
+@media (min-width: 1500px){
+    .carrousel{
+        width: 45%;
+    }
+}

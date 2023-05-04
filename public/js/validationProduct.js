@@ -7,6 +7,7 @@ window.addEventListener('load', ()=>{
     const img = document.querySelector('#product_image')
     const guardar = document.querySelector('#guardar')
 
+    console.log('estoy aca!');
 
     guardar.addEventListener('click', (e)=>{
         console.log(e);
@@ -38,7 +39,6 @@ window.addEventListener('load', ()=>{
             if (typeImg == ""){
                 errors.push('La imagen del producto debe tener un archivo valido, (JPG, JPEG, PNG, GIF)')
             }
-            console.log(errors.length);
             if(errors.length > 0){
                 e.preventDefault();
 

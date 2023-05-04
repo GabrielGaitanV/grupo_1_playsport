@@ -20,7 +20,20 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
         user_image:{
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+        },
+
+        image:{
+            type: dataTypes.VIRTUAL,
+                get(){
+                    return '/images/user/' + this.user_image
+                }
+        },
+        detail :{
+            type: dataTypes.VIRTUAL,
+                get(){
+                    return '/api/users/' + this.user_id;
+                }
         }
     };
     let config = {
