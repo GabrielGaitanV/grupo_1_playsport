@@ -160,6 +160,12 @@ main div form div label input:checked~.checkbox{
     border: solid 1px #01BAEF;
 }
 
+.errors{
+    text-align: center;
+    font-weight: bold;
+    color: #FF007B;
+}
+
 @media (min-width:768px) {
 
     .inicio-con-red{

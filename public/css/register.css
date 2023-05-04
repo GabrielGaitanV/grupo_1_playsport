@@ -106,6 +106,12 @@
     color: #FF007B;
 }
 
+.errors{
+    text-align: center;
+    font-weight: bold;
+    color: #FF007B;
+}
+
 /* Media Celular*/
 @media screen and (max-width: 599px) {
     .inputContainer {
@@ -126,3 +132,4 @@
         width: 30%;
     }
 }
+

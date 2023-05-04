@@ -10,15 +10,18 @@
                     <div class="card">
                         <h2 class="cuestionario">INICIAR SESIÓN</h2>
                         <div>
+                            <div class="errors">
+                                <ul></ul>
+                            </div>
                         <form action="/auth/login" method="POST">
                             <div class="botones">
-                                <input type="email" name="email" placeholder="correo electronico" value="<%= locals.old && old.email ? old.email:'' %>" required><br>
+                                <input type="email" name="email" placeholder="correo electronico" id="user_email" value="<%= locals.old && old.email ? old.email:'' %>" required><br>
                                 <% if (locals.errors && errors.email){%>
                                 <div class="errores">
                                     <%= errors.email.msg%>
                                 </div>
                                 <% } %>
-                                <input  type="password" name="password" placeholder="contraseña" required><br><br>
+                                <input  type="password" name="password" placeholder="contraseña" id="user_password" required><br><br>
                                 <% if (locals.errrors && errors.password){%>
                                 <div class="errores">
                                     <%= errors.password.msg%>
@@ -29,7 +32,7 @@
                                 <span class="checkbox"></span>
                                 Recordar usuario</label><br>
                                 <div>
-                                    <button class="continuar" type="submit">INGRESAR</button>
+                                    <button class="continuar" type="submit" id="ingresar">INGRESAR</button>
                                 </div>
                             </div>
                         </form>
@@ -55,6 +58,7 @@
             </div>
         </main>
         <%- include('../partials/footer') %>
+        <script type="text/javascript" src="/js/validationLogin.js"></script>
     </body>
 
 </html>
