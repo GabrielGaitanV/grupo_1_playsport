@@ -46,7 +46,7 @@ const controller = {
 
     if(req.file){
 
-      userRegister.user_image= req.file.filename
+      userRegister.user_image = req.file.filename
     }
 
     await db.user.create(userRegister)

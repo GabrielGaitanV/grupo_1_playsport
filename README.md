@@ -20,7 +20,7 @@ https://trello.com/b/GuPhVuel/play-sports
 
 ## Repositorio
 
-https://github.com/Andry-Salazar/grupo_1_playsport
+https://github.com/GabrielGaitanV/grupo_1_playsport
 
 ## Actas Weekly Scrum
 https://github.com/Andry-Salazar/grupo_1_playsport/Actas

@@ -38,7 +38,7 @@ store: async function (req, res) {
   //preguntar si el usuario subo una imagen
   if(req.file){
 
-    newProduct.product_image= req.file.filename
+    newProduct.product_image = req.file.filename
   }
   await db.product.create(newProduct)
     .then(function(){

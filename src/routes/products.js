@@ -28,6 +28,6 @@ router.get('/edit/:id', authMiddleware, validationProduct, productsController.ed
 
 router.post('/edit/:id', uploadFile.single('product_image'), productsController.update);//funcionalidad edicion de producto
 
-router.post('/delete/:id', authMiddleware, productsController.destroy)
+router.post('/delete/:id', authMiddleware, productsController.destroy);
 module.exports = router;
   

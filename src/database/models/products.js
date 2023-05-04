@@ -21,6 +21,18 @@ module.exports = (sequelize, dataTypes) => {
         },
         category_id: {
             type: dataTypes.INTEGER,
+        },
+        image:{
+            type: dataTypes.VIRTUAL,
+                get(){
+                    return '/images/ropa-deportiva/' + this.product_image
+                }
+        },
+        detail :{
+            type: dataTypes.VIRTUAL,
+                get(){
+                    return '/api/products/' + this.product_id
+                }
         }
     };
     let config = {
