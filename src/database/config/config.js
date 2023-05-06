@@ -1,22 +1,23 @@
 module.exports = {
   "development": {
-    "username": "root",
-    "password": null,
+    "username": "jamm",
+    "password": '123fenix',
     "database": "PlaySport",
     "host": "127.0.0.1",
-    "port": "3306",
+    "port": "8889",
     "dialect": "mysql",
+    "operatorsALiases": false
   },
   "test": {
-    "username": "root",
-    "password": null,
+    "username": "jamm",
+    "password": "123fenix",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
+    "username": "jamm",
+    "password": "123fenix",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
