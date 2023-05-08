@@ -211,6 +211,12 @@ main div form button {
 .infoWrapper i {
     font-size: 40px;
     color: #01baef;
+        transition: all 1s ease ;
+}
+
+.infoWrapper i:hover {
+    color: #FF007B;
+    transform: rotate(-45deg);
 }
 
 .infoTitle {

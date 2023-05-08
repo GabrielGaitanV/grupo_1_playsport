@@ -6,6 +6,8 @@ const apiProductsController = require('../../controllers/api/apiProductsControll
 //paraa api
 router.get('/', apiProductsController.list);
 
-router.get('/:id', apiProductsController.detail);
+router.get('/lastProduct', apiProductsController.lastProduct)
+
+router.get('/detail/:id', apiProductsController.detail);
 
 module.exports = router;

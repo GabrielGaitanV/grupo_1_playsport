@@ -17,8 +17,10 @@ window.addEventListener('load', ()=>{
             
             if( password.value == '' ){
                 errors.push('El password es obligatorio')
-            }
-
+           }else if(password.value.length < 8){
+                errors.push('El password debe tener almenos 8 caracteres')
+           }
+           
             console.log(errors.length);
 
             if(errors.length > 0){

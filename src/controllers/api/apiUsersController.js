@@ -28,7 +28,26 @@ const controller={
                 status: 200
               })
             })
-      }
+      },
+
+      lastUser: (req, res) => {
+        db.user.findAll(
+            {
+                attributes: ['user_id', 'first_name', 'last_name', 'user_email', 'user_image','image']
+            }
+        )
+            .then(user => {
+
+                //console.log(user);
+                let lastUser = user.pop()
+                //console.log(lastUser);
+                res
+                    .status(200)
+                    .json({
+                        data: lastUser
+                    })
+            })
+    }
       
 }
 

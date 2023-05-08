@@ -5,7 +5,8 @@ const methodOverride = require('method-override');
 const cookies = require ('cookie-parser');
 const session = require('express-session');
 const app = express();
-const port = 3000;
+const cors = require('cors')
+const port = 3007;
 
 const routesProduct = require('./routes/products');
 const routesCart = require('./routes/cart');
@@ -24,6 +25,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride("_method"))
 app.use(cookies());
+app.use(cors())
 app.use(session({
     secret: "PlaySport2022/2023",
     resave: false,
