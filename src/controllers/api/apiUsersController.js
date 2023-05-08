@@ -7,7 +7,7 @@ const controller={
 
     list: (req, res) =>{
 
-      let users = db.user.findAll({attributes:['user_id', 'first_name', 'last_name', 'user_email', 'detail']})
+      let users = db.user.findAll({attributes:['user_id', 'first_name', 'last_name', 'user_email', 'detail', 'user_image',  'image']})
             .then(users =>{
               return res.status(200).json({
                 count: users.length,
