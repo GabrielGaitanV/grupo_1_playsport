@@ -27,6 +27,7 @@ const controller ={
           return  res.status(200).json({
             count: products.length,
             countByCategory:{
+            categorys: categorys.length,
             destacado : destacado.length,
             deporte : deporte.length,
             hombre : hombre.length,
@@ -52,7 +53,26 @@ const controller ={
                 status: 200
               })
             })
-      }
+      },
+
+      lastProduct: (req, res) => {
+        db.product.findAll(
+            {
+                attributes: ['product_id', 'product_name', 'product_description', 'product_price', 'product_image', 'category_id','image']
+            }
+        )
+            .then(product => {
+
+                //console.log(product);
+                let lastProduct = product.pop()
+                //console.log(lastProduct);
+                res
+                    .status(200)
+                    .json({
+                        data: lastProduct
+                    })
+            })
+    }
 };
 
 module.exports = controller;
